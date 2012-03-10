@@ -1,0 +1,19 @@
+#Mac
+.DS_Store
+
+#Android
+bin/
+gen/
+
+#Eclipse
+.classpath
+.project
+.settings/
+
+#IntelliJ IDEA
+.idea/
+*.iml
+
+#Maven
+target/
+
