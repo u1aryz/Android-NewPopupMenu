@@ -9,6 +9,7 @@
 
     <modules>
         <module>android-newpopupmenu-lib</module>
+        <module>android-newpopupmenu-sample</module>
     </modules>
 
     <licenses>
