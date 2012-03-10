@@ -10,4 +10,30 @@
 
     <artifactId>android-newpopupmenu-sample</artifactId>
     <packaging>apk</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.u1aryz</groupId>
+            <artifactId>android-newpopupmenu-lib</artifactId>
+            <version>${project.version}</version>
+            <type>apklib</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
