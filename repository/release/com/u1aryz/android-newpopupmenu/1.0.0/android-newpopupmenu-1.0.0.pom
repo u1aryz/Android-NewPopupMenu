@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.u1aryz</groupId>
+    <artifactId>android-newpopupmenu</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>Android Library - NewPopupMenu</name>
+
+    <modules>
+        <module>android-newpopupmenu-lib</module>
+        <module>android-newpopupmenu-sample</module>
+    </modules>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>u1aryz</id>
+            <name>Yuichi Arai</name>
+            <email>u1aryz.d@gmail.com</email>
+            <timezone>+9</timezone>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <repository>
+            <id>repo</id>
+            <url>http://u1aryz.github.com/Android-NewPopupMenu/repository/release</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshot-repo</id>
+            <url>http://u1aryz.github.com/Android-NewPopupMenu/repository/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <properties>
+        <android.version>1.6_r2</android.version>
+        <android.target>4</android.target>
+        <android.maven.version>3.1.1</android.maven.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.android</groupId>
+                <artifactId>android</artifactId>
+                <version>${android.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.3.2</version>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>${android.maven.version}</version>
+                    <configuration>
+                        <sdk>
+                            <platform>${android.target}</platform>
+                        </sdk>
+                    </configuration>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
