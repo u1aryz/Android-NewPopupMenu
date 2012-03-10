@@ -6,4 +6,8 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>Android Library - NewPopupMenu</name>
+
+    <modules>
+        <module>android-newpopupmenu-lib</module>
+    </modules>
 </project>
