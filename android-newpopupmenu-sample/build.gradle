@@ -1,0 +1,17 @@
+apply plugin: 'android'
+
+dependencies {
+    compile project(':android-newpopupmenu-lib')
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion '17'
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
+        }
+    }
+}

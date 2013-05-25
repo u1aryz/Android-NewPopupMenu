@@ -1,19 +1,23 @@
-#Mac
+# Mac
 .DS_Store
 
-#Android
+# Android
 bin/
 gen/
 
-#Eclipse
+# Eclipse
 .classpath
 .project
 .settings/
 
-#IntelliJ IDEA
+# IntelliJ IDEA
 .idea/
 *.iml
 
-#Maven
+# Maven
 target/
+
+# Gradle
+.gradle
+build/
 
