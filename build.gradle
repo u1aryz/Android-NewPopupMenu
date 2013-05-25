@@ -8,6 +8,10 @@ buildscript {
     }
 }
 
+repoDir = new File(rootDir, 'repository')
+releaseDir = new File(repoDir, 'release')
+snapshotDir = new File(repoDir, 'snapshots')
+
 allprojects {
     group = 'com.u1aryz'
     version = '1.0.1-SNAPSHOT'
@@ -15,6 +19,32 @@ allprojects {
     repositories {
         mavenCentral()
     }
+
+    apply plugin: 'maven'
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                // For http://u1aryz.github.com/Android-NewPopupMenu/repository/release
+                repository url: 'file://' + releaseDir.absolutePath
+
+                // For http://u1aryz.github.com/Android-NewPopupMenu/repository/snapshots
+                snapshotRepository url: 'file://' + snapshotDir.absolutePath
+            }
+        }
+    }
 }
+
+task setUp << {
+
+    if (!releaseDir.exists()) {
+        releaseDir.mkdirs()
+    }
+
+    if (!snapshotDir.exists()) {
+        snapshotDir.mkdirs()
+    }
+}
+
+uploadArchives.dependsOn setUp
 
 apply plugin: 'android-reporting'
