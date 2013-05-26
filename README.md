@@ -26,6 +26,19 @@ repository:
 	    </repository>
 	</repositories>
 
+## Including In Project For Gradle
+dependency:
+
+	dependencies {
+	    compile 'com.u1aryz:android-newpopupmenu-lib:1.0.1'
+	}
+
+repository:
+
+	repositories {
+	    maven { url 'http://u1aryz.github.com/Android-NewPopupMenu/repository/release' }
+	}
+
 ## Developer
 * @u1aryz ( Yuichi. Arai ) - <u1aryz.d@gmail.com>
 
