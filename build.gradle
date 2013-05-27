@@ -34,17 +34,4 @@ allprojects {
     }
 }
 
-task setUp << {
-
-    if (!releaseDir.exists()) {
-        releaseDir.mkdirs()
-    }
-
-    if (!snapshotDir.exists()) {
-        snapshotDir.mkdirs()
-    }
-}
-
-uploadArchives.dependsOn setUp
-
 apply plugin: 'android-reporting'
