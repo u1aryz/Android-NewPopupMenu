@@ -36,7 +36,7 @@ dependency:
 repository:
 
 	repositories {
-	    maven { url 'http://u1aryz.github.com/Android-NewPopupMenu/repository/release' }
+	    mavenCentral()
 	}
 
 ## Developer
